@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Budget Tracker</title>
+    <!-- Link to external CSS file -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER - Main heading and subheading                         -->
+    <!-- ============================================================ -->
+    <header>
+        <h1>💰 My Budget Tracker</h1>
+        <p class="subheading">Track your income and expenses in one place.</p>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- ADD EXPENSE SECTION - Input fields for new expenses          -->
+    <!-- ============================================================ -->
+    <section id="add-expense">
+        <h2>Add Expense</h2>
+
+        <!-- Expense Name -->
+        <div class="form-group">
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" placeholder="e.g., Groceries" />
+        </div>
+
+        <!-- Amount -->
+        <div class="form-group">
+            <label for="expense-amount">Amount ($):</label>
+            <input type="number" id="expense-amount" placeholder="0.00" />
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+            <label for="expense-category">Category:</label>
+            <input type="text" id="expense-category" placeholder="e.g., Food" />
+        </div>
+
+        <!-- Add Expense Button -->
+        <button class="add-btn">Add Expense</button>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- YOUR EXPENSES SECTION - Placeholder for future expenses      -->
+    <!-- ============================================================ -->
+    <section id="your-expenses">
+        <h2>Your Expenses</h2>
+        <p class="placeholder-text">No expenses yet. Start adding your expenses above!</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER - Copyright                                           -->
+    <!-- ============================================================ -->
+    <footer>
+        <p>&copy; 2026 My Budget Tracker</p>
+    </footer>
+
+</body>
+</html>
