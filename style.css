@@ -3,7 +3,6 @@
    ============================================= */
 
 /* ---------- ELEMENT SELECTOR ---------- */
-/* Targets all <body> elements */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
@@ -12,28 +11,24 @@ body {
     color: #333;
 }
 
-/* Targets all <h1> elements */
 h1 {
     color: #2c3e50;
     font-size: 2.5rem;
     margin-bottom: 0.25rem;
 }
 
-/* Targets all <h2> elements */
 h2 {
     color: #34495e;
     border-bottom: 3px solid #3498db;
     padding-bottom: 10px;
 }
 
-/* Targets all <label> elements */
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/* Targets all <input> elements */
 input {
     width: 100%;
     padding: 10px;
@@ -43,7 +38,6 @@ input {
     box-sizing: border-box;
 }
 
-/* Targets all <button> elements */
 button {
     background-color: #3498db;
     color: white;
@@ -56,25 +50,21 @@ button {
 }
 
 /* ---------- CLASS SELECTOR ---------- */
-/* Targets all elements with class="subheading" */
 .subheading {
     color: #7f8c8d;
     font-size: 1.2rem;
     font-style: italic;
 }
 
-/* Targets all elements with class="form-group" */
 .form-group {
     margin-bottom: 15px;
 }
 
-/* Targets all elements with class="add-btn" */
 .add-btn {
     background-color: #2ecc71;
     font-weight: bold;
 }
 
-/* Targets all elements with class="placeholder-text" */
 .placeholder-text {
     background-color: #ecf0f1;
     padding: 30px;
@@ -86,7 +76,6 @@ button {
 }
 
 /* ---------- ID SELECTOR ---------- */
-/* Targets the element with id="add-expense" */
 #add-expense {
     background-color: white;
     padding: 25px;
@@ -96,7 +85,6 @@ button {
     max-width: 600px;
 }
 
-/* Targets the element with id="your-expenses" */
 #your-expenses {
     background-color: white;
     padding: 25px;
@@ -105,8 +93,7 @@ button {
     max-width: 600px;
 }
 
-/* ---------- ADDITIONAL STYLING ---------- */
-/* Header styling */
+/* ---------- HEADER ---------- */
 header {
     background-color: #2c3e50;
     color: white;
@@ -126,7 +113,12 @@ header .subheading {
     color: #ecf0f1;
 }
 
-/* Footer styling */
+header img {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
     margin-top: 30px;
     text-align: center;
@@ -144,4 +136,108 @@ input:focus {
     border-color: #3498db;
     outline: none;
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* =============================================
+   WEEK 2 ADDITIONS
+   ============================================= */
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1rem;
+}
+
+/* ADVANCED SELECTOR #1: positional pseudo-class */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ADVANCED SELECTOR #2: hover pseudo-class */
+tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* ADVANCED SELECTOR #3: descendant selector */
+#your-expenses td {
+    font-size: 0.95rem;
+}
+
+/* ADVANCED SELECTOR #4: direct child selector */
+#add-expense > h2 {
+    margin-top: 0;
+}
+
+/* ADVANCED SELECTOR #5: negation pseudo-class */
+input:not([type="submit"]) {
+    background-color: #fff;
+}
+
+/* ---------- SELECT DROPDOWN ---------- */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* ---------- DETAILS / SUMMARY ---------- */
+#how-to {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#how-to summary {
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+#how-to p {
+    color: #555;
+    margin: 10px 0 0 0;
+    line-height: 1.5;
+}
+
+/* ---------- MEDIA / IFRAME ---------- */
+#budget-tip {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+#budget-tip iframe {
+    max-width: 100%;
+    border-radius: 6px;
 }
