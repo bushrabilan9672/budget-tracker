@@ -10,47 +10,130 @@
 <body>
 
     <!-- ============================================================ -->
-    <!-- HEADER - Main heading and subheading                         -->
+    <!-- HEADER - Logo, main heading, and subheading                  -->
     <!-- ============================================================ -->
     <header>
+        <!-- Replace src with "logo.png" if you save a local logo file -->
+        <img src="https://via.placeholder.com/50" alt="Budget Tracker logo" width="50" />
         <h1>💰 My Budget Tracker</h1>
         <p class="subheading">Track your income and expenses in one place.</p>
     </header>
 
     <!-- ============================================================ -->
-    <!-- ADD EXPENSE SECTION - Input fields for new expenses          -->
+    <!-- HOW TO USE - Collapsible instructions                        -->
+    <!-- ============================================================ -->
+    <details id="how-to">
+        <summary>How to use this tracker</summary>
+        <p>
+            Enter the name, amount, category, and date of an expense in the form below,
+            then click "Add Expense". Your expenses will appear in the table above.
+        </p>
+    </details>
+
+    <!-- ============================================================ -->
+    <!-- ADD EXPENSE SECTION - Form for entering new expenses         -->
     <!-- ============================================================ -->
     <section id="add-expense">
         <h2>Add Expense</h2>
 
-        <!-- Expense Name -->
-        <div class="form-group">
-            <label for="expense-name">Expense Name:</label>
-            <input type="text" id="expense-name" placeholder="e.g., Groceries" />
-        </div>
+        <form>
+            <!-- Expense Name -->
+            <div class="form-group">
+                <label for="expense-name">Expense Name:</label>
+                <input type="text" id="expense-name" name="expense-name" placeholder="e.g., Groceries" />
+            </div>
 
-        <!-- Amount -->
-        <div class="form-group">
-            <label for="expense-amount">Amount ($):</label>
-            <input type="number" id="expense-amount" placeholder="0.00" />
-        </div>
+            <!-- Amount -->
+            <div class="form-group">
+                <label for="expense-amount">Amount ($):</label>
+                <input type="number" id="expense-amount" name="expense-amount" placeholder="0.00" />
+            </div>
 
-        <!-- Category -->
-        <div class="form-group">
-            <label for="expense-category">Category:</label>
-            <input type="text" id="expense-category" placeholder="e.g., Food" />
-        </div>
+            <!-- Category (dropdown) -->
+            <div class="form-group">
+                <label for="expense-category">Category:</label>
+                <select id="expense-category" name="expense-category">
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="rent">Rent</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
-        <!-- Add Expense Button -->
-        <button class="add-btn">Add Expense</button>
+            <!-- Date -->
+            <div class="form-group">
+                <label for="expense-date">Date:</label>
+                <input type="date" id="expense-date" name="expense-date" />
+            </div>
+
+            <!-- Add Expense Button (no action yet - JavaScript comes in Week 6) -->
+            <button type="button" class="add-btn">Add Expense</button>
+        </form>
     </section>
 
     <!-- ============================================================ -->
-    <!-- YOUR EXPENSES SECTION - Placeholder for future expenses      -->
+    <!-- YOUR EXPENSES SECTION - Table of recorded expenses           -->
     <!-- ============================================================ -->
     <section id="your-expenses">
         <h2>Your Expenses</h2>
-        <p class="placeholder-text">No expenses yet. Start adding your expenses above!</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Groceries</td>
+                    <td>2500</td>
+                    <td>Food</td>
+                    <td>2026-09-08</td>
+                </tr>
+                <tr>
+                    <td>Matatu fare</td>
+                    <td>150</td>
+                    <td>Transport</td>
+                    <td>2026-09-08</td>
+                </tr>
+                <tr>
+                    <td>Rent</td>
+                    <td>15000</td>
+                    <td>Rent</td>
+                    <td>2026-09-01</td>
+                </tr>
+                <tr>
+                    <td>Netflix</td>
+                    <td>1100</td>
+                    <td>Entertainment</td>
+                    <td>2026-09-05</td>
+                </tr>
+                <tr>
+                    <td>Airtime</td>
+                    <td>200</td>
+                    <td>Other</td>
+                    <td>2026-09-07</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BUDGETING TIP - Embedded YouTube video                       -->
+    <!-- ============================================================ -->
+    <section id="budget-tip">
+        <h2>Budgeting Tip</h2>
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HQzoZfc3GwQ"
+            title="Budgeting Tip Video"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
     </section>
 
     <!-- ============================================================ -->
